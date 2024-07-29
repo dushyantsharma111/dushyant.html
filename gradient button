@@ -15,6 +15,7 @@
         button{
             padding: 1em 2em;
             cursor: pointer;
+            color:white;
             background-color: aquamarine;
             border-radius: 1000px;
             border: none;
@@ -34,8 +35,8 @@
             transition: all 0.8s ease;
             
         }
-        button:hover::after{
-            z-index:1;
+        button:hover{
+            z-index:0;
             box-shadow: 10px 0 100px rgb(243, 233, 88),-10px 0 100px #527085;
         }
     </style>
