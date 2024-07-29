@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height:100vh;
+        }
+        button{
+            padding: 1em 2em;
+            cursor: pointer;
+            background-color: aquamarine;
+            border-radius: 1000px;
+            border: none;
+            position: relative;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button::after{
+            content:"" ;
+            width:100%;
+            height: 109%;
+            background-image:linear-gradient(to right bottom,rgb(8, 23, 31),rgb(38, 19, 39));
+            position: absolute;
+            border-radius:1000px;
+            z-index:-1;
+            transition: all 0.8s ease;
+            
+        }
+        button:hover::after{
+            z-index:1;
+            box-shadow: 10px 0 100px rgb(243, 233, 88),-10px 0 100px #527085;
+        }
+    </style>
+</head>
+<body>
+    <button> gradeint button</button>
+</body>
+</html>
