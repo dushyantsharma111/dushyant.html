@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(37, 63, 87);
+        }
+       
+        
+        h1{
+            text-align: center;
+            color:white;
+            margin-top: 70px;
+        }
+        .container{
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+  
+        <h1> TO DO LIST</h1>
+        <div class="container">
+            <label for="">task name</label>
+            <input type="text" placeholder="enter task name" id="taskname">
+            <button onclick="addtask()">add task</button>
+        </div>
+       <ul id="tasklist"></ul>
+       
+
+       <script>
+       
+        
+        function addtask(){
+
+           var taskname=document.getElementById("taskname").value 
+           var tasklist=document.getElementById("tasklist")
+
+           let li=document.createElement("li")
+
+           li.innerHTML=`${taskname} <button onclick="remove(this)">remove</button>`;
+
+           tasklist.appendChild(li)
+        }
+
+        function remove(tagname){
+           p =tagname.parentElement
+            p.remove()
+        }
+       </script>
+  
+</body>
+</html>
