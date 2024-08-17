@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,29 @@
             border:1px solid black;
             margin-left: auto;
             margin-right:auto;
-            height: 300px;
-            width: 300px;
+            
         }
-        input(type="button"){
+        input[type="button"]{
+            width:100%;
+           padding:20px 40px;
+           background-color: gray;
+           color:black;
+           font-size: 24px;font-weight: bold;
+           border:none;
+           border-radius: 5px;
+
+
 
         }
+        input[type="text"]{
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            border:2px solid black;
+        }
+
+
     </style>
            
 </head>
@@ -22,7 +40,7 @@
 <table id="calculator">
     <tr>
         <td colspan="3">
-            <input type="text" id="result">
+            <input type="text" placeholder="enter result name" id="result">
 
         </td>
         <td><input type="button" value="c">
@@ -60,7 +78,10 @@
         
     </tr>
 </table>
-    
+    <button onclick="result_task()">result task</button>
+    <ul id="result_list">
+        
+    </ul>
 
  </div>
 </body>
